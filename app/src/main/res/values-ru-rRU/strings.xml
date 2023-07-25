@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Опросник</string>
+    <string name="Continue">Начать</string>
+    <string name="pictureDescription">Картина с большим знаком вопроса, на которую облокатился человек</string>
+    <string name="Back">Назад</string>
+    <string name="Send">Отправить</string>
+    <string name="answer">Ответьте на все вопросы</string>
+    <string name="StartOver">Начать заново</string>
+    <string name="your_results">Ваши результаты</string>
+</resources>

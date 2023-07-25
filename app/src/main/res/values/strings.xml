@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="Continue">Start</string>
+    <string name="pictureDescription">Picture with a big question mark and person leaning towards it</string>
+    <string name="Back">Back</string>
+    <string name="Send">Send</string>
+    <string name="answer">Answer all questions</string>
+    <string name="StartOver">Start over</string>
+    <string name="your_results">Your results</string>
+</resources>

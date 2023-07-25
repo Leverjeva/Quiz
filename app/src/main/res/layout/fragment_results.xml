@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.ResultsFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="@string/your_results"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feedback1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/feedback2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/opensans_regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback1" />
+
+    <TextView
+        android:id="@+id/feedback3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/feedback2"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/start_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/StartOver"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/feedback3"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_margin="16dp"
+        app:lottie_rawRes="@raw/astronaut"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintTop_toBottomOf="@id/start_over"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

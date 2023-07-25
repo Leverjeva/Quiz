@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.skillbox_hw_quiz.ui.main.StartFragment"
+        android:label="Start"
+        tools:layout="@layout/start_fragment"  >
+        <action
+            android:id="@+id/action_startFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.skillbox_hw_quiz.ui.main.QuestionFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.skillbox_hw_quiz.ui.main.ResultsFragment"
+        android:label="Results"
+        tools:layout="@layout/fragment_results" >
+
+        <argument
+            android:name="answer1"
+            app:argType="integer"/>
+        <argument
+            android:name="answer2"
+            app:argType="integer"/>
+        <argument
+            android:name="answer3"
+            app:argType="integer"/>
+
+        <action
+            android:id="@+id/action_resultFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
+    </fragment>
+</navigation>
